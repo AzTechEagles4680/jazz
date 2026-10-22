@@ -24,4 +24,11 @@ public ShooterSubsytem(){
 
     }
 
+    //Test statement
+    //DEMO/SIM USE (repurpose for troubleshooting if need be)
+    public Command printTest(String text){
+        return Commands.runOnce(()->
+            System.out.println(text));
+    }
+
 }
