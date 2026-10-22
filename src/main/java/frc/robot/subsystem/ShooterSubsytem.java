@@ -20,15 +20,14 @@ public ShooterSubsytem(){
     public Command startMethod(double speed){
         return Commands.runOnce(()->
             motor6.set(speed));
-
-
     }
 
     //Test statement
     //DEMO/SIM USE (repurpose for troubleshooting if need be)
     public Command printTest(String text){
         return Commands.runOnce(()->
-            System.out.println(text));
+            System.out.println("lol"
+            ));
     }
 
 }
