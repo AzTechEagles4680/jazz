@@ -27,7 +27,8 @@ public class RobotContainer {
     // method
     // should be called once, and only if we are in simulation
     private void configSimBindings() {
-        joystick.button(1).onTrue(shooterSubsys.printTest("This is a test :)"));
+        joystick.button(1).whileTrue(shooterSubsys.print("This is a test :)"));
+        joystick.button(2).whileTrue(shooterSubsys.print("hotdog :)"));
     }
 
 }

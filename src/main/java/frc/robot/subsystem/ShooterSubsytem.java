@@ -12,6 +12,9 @@ public class ShooterSubsytem extends SubsystemBase {
    private final SparkMax motorShooterSparkMax = new SparkMax(0, MotorType.kBrushless);
    private final SparkMax followerMotor = new SparkMax(4, MotorType.kBrushless);
    private final SparkMax motor6 = new SparkMax(8, MotorType.kBrushless);
+
+   public Double SHOOTERSPEED = 0.0;
+
 //constructor
 public ShooterSubsytem(){
 
@@ -25,9 +28,16 @@ public ShooterSubsytem(){
     //Test statement
     //DEMO/SIM USE (repurpose for troubleshooting if need be)
     public Command printTest(String text){
-        return Commands.runOnce(()->
-            System.out.println("lol"
+        return Commands.run(()->
+            System.out.println(text
             ));
     }
-
+    
+    public Command print(String text){
+        return Commands.runEnd(()->
+            System.out.println(text
+            ), ()->
+                System.out.println("mech")
+            );
+    }
 }

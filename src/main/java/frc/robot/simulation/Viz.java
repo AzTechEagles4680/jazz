@@ -1,7 +1,6 @@
 package frc.robot.simulation;
 
 import edu.wpi.first.math.geometry.Rotation3d;
-import edu.wpi.first.math.geometry.Transform3d;
 import edu.wpi.first.wpilibj.smartdashboard.MechanismLigament2d;
 import edu.wpi.first.wpilibj.smartdashboard.MechanismRoot2d;
 import edu.wpi.first.wpilibj.util.Color8Bit;
@@ -11,19 +10,14 @@ public class Viz {
     private MechanismRoot2d root;
     private MechanismLigament2d ligament;
 
+
     // Constructor
-    public Viz(String vizName) {
+    public Viz(String vizName, double rootX, double rootY, double ligLength, double ligAngle, double ligLineWidth) {
         this.name = vizName;
     }
 
     // Constructor
-    public Viz(String vizName, MechanismRoot2d root, double ligLength, double ligAngle, double ligLineWidth) {
-        this.name = vizName;
-
-    }
-
-    // Constructor
-    public Viz(String vizName, MechanismRoot2d root, double ligLength, double ligAngle, double ligLineWidth,
+    public Viz(String vizName, double rootX, double rootY, double ligLength, double ligAngle, double ligLineWidth,
             Color8Bit color) {
         this.name = vizName;
 
